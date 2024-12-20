@@ -31,7 +31,7 @@ The data flows through the following steps:
 
 
 The project data is used from AdventureWorks data stored in Github.
-The [dataset](https://github.com/flynnRider046/End-to-End-AdventureWorks-Azure-Data-Engineering/tree/a058bc413e0cc9602f10a1a479cfa64a83bb9e2d/Data)
+The [dataset](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/tree/fe3b5a8906de09a05c332f09c15a823cc6b902a2/Data)
  involves multiple files with information about
 * Calendar
 * Customers
