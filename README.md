@@ -7,7 +7,7 @@ This project performs the end-to-end Data Engineering implementation for the <st
 This project uses the AdventureWorks dataset, fetched directly from Github. With this data we process, transform and deliver data for Business Intelligence (BI) purpose, using the resources like Azure Data Factory, Azure Databricks, Azure Synapse Analytics, and Power BI.
 
 ## Architecture Diagram
-![Architecture Diagram](https://github.com/flynnRider046/End-to-End-AdventureWorks-Azure-Data-Engineering/blob/main/Images/Architecture.png)
+![Architecture Diagram](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/76fc1a973174cf23261a6d6290479fb202f9000c/Images/Architecture.png)
 The data flows through the following steps:
 1. <strong>Data Source</strong>: The source of the data is AdventureWorks data which is stored in Github.
 2. <strong>Data Ingestion</strong>: Data from the Github is ingested to Azure Data Factory. In the Data Factory the data is prepared for processing.
