@@ -81,9 +81,9 @@ The final step involved integrating the transformed data into Power BI for visua
 ![Insights1](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/Power%20BI.png)
 
 ## Summary of Project
-The project focused on building a scalable data pipeline for processing and analyzing large datasets using Azure tools. Azure Data Factory orchestrated data ingestion into Azure Data Lake Storage for centralized storage, while Azure Databricks handled ETL processes to clean, aggregate, and enrich data. The processed data was loaded into Azure Synapse Analytics for analytical querying and reporting, with Power BI dashboards delivering real-time business insights.
+The project focused on building a scalable data pipeline for processing and analyzing large datasets using Azure tools. Azure Data Factory orchestrated data ingestion into Azure Data Lake Storage (Bronze layer) for centralized storage. Azure Databricks handled ETL processes to clean, aggregate, and enrich data using Apache Spark with best practices like caching and partitioning. The processed data was loaded into Azure Synapse Analytics, leveraging dedicated SQL pools for analytical querying and reporting. Finally, Power BI dashboards provided real-time business insights.
 
-Key highlights included optimizing pipeline performance, ensuring data quality through validation checks, and implementing robust security measures. The solution empowered data-driven decision-making by providing accurate, timely, and actionable insights.
+Key highlights included optimizing pipeline performance with parameterized pipelines, ensuring data quality through validation checks, and implementing robust security measures. This solution empowered data-driven decision-making by delivering accurate, timely, and actionable insights.
 
 
 ## Contributors
