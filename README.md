@@ -11,7 +11,7 @@ This project uses the AdventureWorks dataset, fetched directly from Github. With
 The data flows through the following steps:
 1. <strong>Data Source</strong>: The source of the data is AdventureWorks data which is stored in Github.
 2. <strong>Data Ingestion</strong>: Data from the Github is ingested to Azure Data Factory. In the Data Factory the data is prepared for processing.
-3. <strong>Raw Data Storage</strong>: The ingested raw data is stored in Azure Data Lake Gen2.
+3. <strong>Raw Data Storage</strong>: The ingested raw data is stored in Azure Data Lake Storage Gen2.
 4. <strong>Transformation</strong>: Azure Databricks is used for data transformation. Various operations are performed to process the raw data.
 5. <strong>Serving</strong>: Azure Synapse Analytics is used for generating insights from the transformed data.
 6. <strong>Reporting</strong>: The data visualizations are done with Power BI.
