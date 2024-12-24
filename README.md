@@ -11,10 +11,10 @@ This project uses the AdventureWorks dataset, fetched directly from Github. With
 The data flows through the following steps:
 1. <strong>Data Source</strong>: The source of the data is AdventureWorks data which is stored in Github.
 2. <strong>Data Ingestion</strong>: Data from the Github is ingested to Azure Data Factory. In the Data Factory the data is prepared for processing.
-3. <strong>Raw Data Storage</strong>: The ingested raw data is stored in Azure Data Lake Storage Gen2.
-4. <strong>Transformation</strong>: Azure Databricks is used for data transformation. Various operations are performed to process the raw data.
+3. <strong>Raw Data Storage</strong>: The ingested raw data is stored in Azure Data Lake Gen2, providing scalable and secure storage.
+4. <strong>Transformation</strong>:Azure Databricks is used for data transformation, performing various operations to process and refine the raw data.
 5. <strong>Serving</strong>: Azure Synapse Analytics is used for generating insights from the transformed data.
-6. <strong>Reporting</strong>: The data visualizations are done with Power BI.
+6. <strong>Reporting</strong>: Data visualizations are created with Power BI, providing interactive and insightful reports for business decision-making.
 
 ## Azure Servies Used
 * Microsoft Azure
@@ -45,30 +45,30 @@ The [dataset](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineerin
 * Territories
 
 ## Resource Groups
-Resource Groups in Azure are logical containers used to manage and organize project related Azure resources. They support lifecycle management by enabling easy deletion of associated resources. Additionally, resource groups help track costs and usage across services. The first step here is to setup Resource groups. Following image shows the resource groups implementation
+Resource Groups in Azure are logical containers that help organize and manage project-related Azure resources. They simplify lifecycle management by enabling easy deletion of associated resources and provide a way to track costs and usage across services. The first step in the project is to set up the Resource Groups. The following image illustrates the implementation of the resource groups.
 
 ![Resource Groups](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/AWPROJECT%20Resource%20Group.png)
 
 ## Data Ingestion
-We have used Azure Data Factory for data orchestration and automation. Data Factory oulls the data from GitHub using an HTTP connector and stores it in the bronze container in Azure Storage. Parameters are added to the pipeline for adaptability to changes in the data source.
+We used Azure Data Factory for data orchestration and automation. Data is pulled from GitHub using an HTTP connector and stored in the bronze container in Azure Storage. Parameters are incorporated into the pipeline to ensure adaptability to changes in the data source.
 
 ![Data Ingestion](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/Data%20Factory.png)
 
 ## Storage Accounts
-We have used Azure Data Lake Gen2 for storing the raw data. In Azure Data Engineering, the Bronze, Silver and Gold layers represent a data architecture pattern used in Data Lakes and Lakehouses for organiing and processing data. 
-The Bronze layer is the raw data storage layer where data from various sources is ingested in its original format regardless of structure. The data is immutable and is used for data reprocessing.
+We used Azure Data Lake Gen2 to store the raw data. In Azure Data Engineering, the Bronze, Silver, and Gold layers represent a data architecture pattern used in Data Lakes and Lakehouses for organizing and processing data. 
+The Bronze layer serves as the raw data storage layer, where data from various sources is ingested in its original format, regardless of structure. The data is immutable and used for reprocessing.
 
 ![BronzeLayer](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/Bronze%20Container.png)
 
-The Silver layer contains cleaned and transformed data from the Bronze layer, the data transformation is performed through Azure Databricks where the process like data standardization and basic transformations takes place making it suitable for intermediate analytics and operational reporting.
+The Silver layer contains cleaned and transformed data from the Bronze layer. Data transformation is performed using Azure Databricks, where processes like data standardization and basic transformations are applied, making it suitable for intermediate analytics and operational reporting.
 
 ![SilverLayer](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/Silver%20Container.png)
 
-The gold layer contains curated, fully processed adventure data that is ready for advanced analytics. The data in this layer is aggregated, summarized, and enriched to support decision-making processes.
+The Gold layer contains curated, fully processed data that is ready for advanced analytics. The data in this layer is aggregated, summarized, and enriched to support decision-making processes.
 
 ![GoldLayer](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/Gold%20Container.png)
 
-This layered approach ensures data quality, scalability, and easier data management while enabling robust analytics using Azure services like Azure data Lake Storage, Azure Synapse Analytics, Azure Data Fctory and Azure Databricks.
+This layered approach ensures data quality, scalability, and efficient data management, enabling robust analytics using Azure services like Azure Data Lake Storage, Azure Synapse Analytics, Azure Data Factory, and Azure Databricks.
 
 ## Data Transformation
 Azure Databricks is used to convert raw data in bronze container to a structured format. For this we have made sure a cluster for databricks is created for data efficiency. This databricks is connected to the data in the silver layer and is transformed for further analysis. Please find the attached [ipynb](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/silver_layer.ipynb) file which performs the transformation on the data present in silver layer. The transformations include performing normalization of data formats for consistency, concatenating data to make it more usable for analysis.
