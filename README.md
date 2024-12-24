@@ -56,6 +56,7 @@ We used Azure Data Factory for data orchestration and automation. Data is pulled
 
 ## Storage Accounts
 We used Azure Data Lake Gen2 to store the raw data. In Azure Data Engineering, the Bronze, Silver, and Gold layers represent a data architecture pattern used in Data Lakes and Lakehouses for organizing and processing data. 
+
 The Bronze layer serves as the raw data storage layer, where data from various sources is ingested in its original format, regardless of structure. The data is immutable and used for reprocessing.
 
 ![BronzeLayer](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/Bronze%20Container.png)
