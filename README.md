@@ -72,17 +72,18 @@ The Gold layer contains curated, fully processed data that is ready for advanced
 This layered approach ensures data quality, scalability, and efficient data management, enabling robust analytics using Azure services like Azure Data Lake Storage, Azure Synapse Analytics, Azure Data Factory, and Azure Databricks.
 
 ## Data Transformation
-Azure Databricks is used to convert raw data in bronze container to a structured format. For this we have made sure a cluster for databricks is created for data efficiency. This databricks is connected to the data in the silver layer and is transformed for further analysis. Please find the attached [ipynb](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/silver_layer.ipynb) file which performs the transformation on the data present in silver layer. The transformations include performing normalization of data formats for consistency, concatenating data to make it more usable for analysis.
+Azure Databricks is used to transform raw data from the Bronze container into a structured format. A dedicated Databricks cluster was created to ensure data processing efficiency. The transformed data is stored in the Silver layer for further analysis.  Attached is an [ipynb](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/silver_layer.ipynb) file detailing the transformations, which include normalizing data formats for consistency and concatenating datasets to enhance usability for analysis.
 
 
 ## Insights and Analytics
-The final step here was integrating the data with Power BI tool to visualize and generate insights. Here are the reports to present actionable insights to stakeholders. Below graph shows shows number of orders on different order dates.
+The final step involved integrating the transformed data into Power BI for visualization and insights generation. The reports created in Power BI provide actionable insights for stakeholders. For example, the visualizations highlight the number of orders placed across different years and the growth in customer engagement over time. These insights help stakeholders understand trends and make informed decisions.
+
 ![Insights1](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/Power%20BI.png)
 
 ## Summary of Project
-The project involved building a scalable data pipeline for processing and analyzing large datasets using Azure based tools. Azure Data Factory orchestrated data ingestion into Azure Data Lake Storage for centralized storage. Data transformation was performed using Azure Databricks, implementing ETL processes to clean, aggregate, and enrich data. Processed data was loaded into Azure Synapse Analytics for analytical querying and reporting. Power BI dashboards provided real-time business insights.
+The project focused on building a scalable data pipeline for processing and analyzing large datasets using Azure tools. Azure Data Factory orchestrated data ingestion into Azure Data Lake Storage for centralized storage, while Azure Databricks handled ETL processes to clean, aggregate, and enrich data. The processed data was loaded into Azure Synapse Analytics for analytical querying and reporting, with Power BI dashboards delivering real-time business insights.
 
-Key aspects included optimizing data pipeline performance, ensuring data quality through validation checks, and implementing robust security measures. The solution supported data-driven decision-making by delivering accurate, timely, and actionable insights.
+Key highlights included optimizing pipeline performance, ensuring data quality through validation checks, and implementing robust security measures. The solution empowered data-driven decision-making by providing accurate, timely, and actionable insights.
 
 
 ## Contributors
