@@ -72,7 +72,10 @@ The Gold layer contains curated, fully processed data that is ready for advanced
 This layered approach ensures data quality, scalability, and efficient data management, enabling robust analytics using Azure services like Azure Data Lake Storage, Azure Synapse Analytics, Azure Data Factory, and Azure Databricks.
 
 ## Data Transformation
-Azure Databricks is used to transform raw data from the Bronze container into a structured format. A dedicated Databricks cluster was created to ensure data processing efficiency. The transformed data is stored in the Silver layer for further analysis.  Attached is an [ipynb](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/silver_layer.ipynb) file detailing the transformations, which include normalizing data formats for consistency and concatenating datasets to enhance usability for analysis.
+Azure Databricks was utilized to transform raw data from the Bronze container into a structured format, storing it in the Silver layer for advanced analytics. A dedicated Databricks cluster was set up to optimize processing efficiency.
+![Cluster](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/335ae8c213b8b3405d64eac4f3eaf048fab37caa/Images/Cluster.png)
+
+The transformation process involved data cleaning, filtering, normalization for consistency, and dataset concatenation to enhance usability. The attached notebook [ipynb](https://github.com/YaswanthiUnnam/Azure-End-to-End-Data-Engineering-Project/blob/d78c4054743c7bbb107f739e57245fe6403a69c7/Images/silver_layer.ipynb) file details the steps, including data ingestion from the Bronze layer, transformation using PySpark, and the creation of the Silver layer for reporting and further analysis.
 
 
 ## Insights and Analytics
